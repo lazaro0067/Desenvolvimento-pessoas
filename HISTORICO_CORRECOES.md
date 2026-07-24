@@ -40,10 +40,31 @@ error CS1061: 'WebApplication' does not contain a definition for 'UseSwaggerUI'
 <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
 ```
 
+**Status:** ✅ Resolvido
+
+---
+
+### Erro 3: Nome Incorreto do DbContext ✅
+**Erro no Render:**
+```
+error CS0246: The type or namespace name 'AppDbContext' could not be found
+```
+
+**Causa:** `Program.cs` usava `AppDbContext` mas o nome correto é `ApplicationDbContext`
+
+**Solução:** Corrigido em `src/Api/Program.cs` linha 32:
+```csharp
+// ❌ ANTES
+builder.Services.AddDbContext<AppDbContext>(options =>
+
+// ✅ DEPOIS
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+```
+
 **Validação Local:**
 ```
 dotnet build src/Api/Desenvolvimento.Api.csproj --configuration Release
-✅ Construir Êxito em 6,6s
+✅ Construir Êxito em 5,2s
 ```
 
 **Status:** ✅ Resolvido
@@ -57,6 +78,9 @@ dotnet build src/Api/Desenvolvimento.Api.csproj --configuration Release
 
 2. ✅ `src/Api/Desenvolvimento.Api.csproj`
    - Adicionado `Swashbuckle.AspNetCore` version 7.2.0
+
+3. ✅ `src/Api/Program.cs`
+   - Corrigido nome do DbContext: `AppDbContext` → `ApplicationDbContext`
 
 ---
 

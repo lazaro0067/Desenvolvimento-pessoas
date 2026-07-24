@@ -29,7 +29,7 @@ if (connectionString != null && connectionString.StartsWith("postgresql://"))
     connectionString = builderConn.ToString();
 }
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 builder.Services.AddEndpointsApiExplorer();
