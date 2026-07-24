@@ -1,0 +1,11 @@
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\bin\Release\net10.0\Desenvolvimento.Core.deps.json
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\bin\Release\net10.0\Desenvolvimento.Core.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\bin\Release\net10.0\Desenvolvimento.Core.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\Desenvolvimento.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\Desenvolvimento.Core.AssemblyInfoInputs.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\Desenvolvimento.Core.AssemblyInfo.cs
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\Desenvolvimento.Core.csproj.CoreCompileInputs.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\Desenvolvimento.Core.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\refint\Desenvolvimento.Core.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\Desenvolvimento.Core.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Core\obj\Release\net10.0\ref\Desenvolvimento.Core.dll

@@ -1,0 +1,17 @@
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Services.deps.json
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Services.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Services.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Core.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Infrastructure.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Core.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\bin\Release\net10.0\Desenvolvimento.Infrastructure.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.csproj.AssemblyReference.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.AssemblyInfoInputs.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.AssemblyInfo.cs
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.csproj.CoreCompileInputs.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvol.2012A18C.Up2Date
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\refint\Desenvolvimento.Services.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\Desenvolvimento.Services.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Services\obj\Release\net10.0\ref\Desenvolvimento.Services.dll

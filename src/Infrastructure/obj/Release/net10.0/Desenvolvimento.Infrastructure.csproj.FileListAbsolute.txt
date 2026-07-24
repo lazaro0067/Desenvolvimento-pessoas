@@ -1,0 +1,15 @@
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\bin\Release\net10.0\Desenvolvimento.Infrastructure.deps.json
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\bin\Release\net10.0\Desenvolvimento.Infrastructure.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\bin\Release\net10.0\Desenvolvimento.Infrastructure.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\bin\Release\net10.0\Desenvolvimento.Core.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\bin\Release\net10.0\Desenvolvimento.Core.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.AssemblyInfo.cs
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvol.014FD456.Up2Date
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\refint\Desenvolvimento.Infrastructure.dll
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\Desenvolvimento.Infrastructure.pdb
+C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Infrastructure\obj\Release\net10.0\ref\Desenvolvimento.Infrastructure.dll
