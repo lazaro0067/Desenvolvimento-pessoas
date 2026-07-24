@@ -141,10 +141,8 @@ C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\Desenvolvimento.Core.dll
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\Desenvolvimento.Infrastructure.dll
-C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\Desenvolvimento.Services.dll
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\Desenvolvimento.Core.pdb
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\Desenvolvimento.Infrastructure.pdb
-C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\bin\Release\net10.0\Desenvolvimento.Services.pdb
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\obj\Release\net10.0\Desenvolvimento.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\obj\Release\net10.0\rjimswa.dswa.cache.json
 C:\Users\Lázaro\source\repos\Desenvolvimento de pessoas\src\Api\obj\Release\net10.0\rjsmrazor.dswa.cache.json

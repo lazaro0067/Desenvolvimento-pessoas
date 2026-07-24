@@ -8,5 +8,6 @@
 	<ProjectReference Include="..\Core\Desenvolvimento.Core.csproj" />
 	<ProjectReference Include="..\Infrastructure\Desenvolvimento.Infrastructure.csproj" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
   </ItemGroup>
 </Project>
