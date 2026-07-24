@@ -1,0 +1,46 @@
+# Render.com Configuration
+# Deploy gratuito da Plataforma Desenvolvimento de Pessoas
+
+services:
+  # Web Service (API)
+  - type: web
+    name: desenvolvimento-pessoas-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    region: oregon  # Região gratuita mais próxima
+    plan: free  # Tier gratuito
+
+    # Variáveis de ambiente
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://+:8080
+      - key: ConnectionStrings__DefaultConnection
+        fromDatabase:
+          name: desenvolvimento-pessoas-db
+          property: connectionString
+
+    # Health check
+    healthCheckPath: /health
+
+    # Auto-deploy on push
+    autoDeploy: true
+
+    # Build command (executado antes do deploy)
+    buildCommand: echo "Build is handled by Dockerfile"
+
+# Banco de Dados PostgreSQL Gratuito
+databases:
+  - name: desenvolvimento-pessoas-db
+    databaseName: desenvolvimentodb
+    plan: free  # 500 MB storage, expira após 90 dias de inatividade
+    region: oregon
+    ipAllowList: []  # Permitir todas as conexões (free tier não suporta IP whitelist)
+
+# Notas sobre o Free Tier:
+# - Web Service: 750 horas/mês, 512 MB RAM, sleep após 15 min inatividade
+# - Database: 500 MB storage, 90 dias de retenção de backup
+# - Deploy: Automático via Git push
+# - SSL/HTTPS: Incluído gratuitamente
+# - Custom domain: Suportado (mas precisa ser configurado manualmente)

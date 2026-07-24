@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Impulsionar/Impulsionar.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
