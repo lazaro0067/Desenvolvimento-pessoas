@@ -8,12 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Identity
+// Configuração do Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-// Registrar serviços (comentados temporariamente até o namespace/projeto de serviços ser vinculado)
+// Registrar serviços (comentados temporariamente até os serviços serem vinculados)
 // builder.Services.AddScoped<IDiscService, DiscService>();
 // builder.Services.AddScoped<IAgentService, AgentService>();
 // builder.Services.AddScoped<IPaymentService, PaymentService>();
@@ -23,6 +23,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Garantir a criação das tabelas no PostgreSQL (Neon) na inicialização da aplicação
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.EnsureCreated();
+}
+
 // Habilita o Swagger em qualquer ambiente (Desenvolvimento e Produção)
 app.UseSwagger();
 app.UseSwaggerUI(c =>
@@ -31,12 +38,14 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
+// Endpoint de verificação de saúde da aplicação
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
+// Endpoint para listagem de usuários
 app.MapGet("/api/users", async (ApplicationDbContext db) =>
     await db.AppUsers.ToListAsync());
 
-// Endpoint para inicializar roles e criar usuário master (apenas para desenvolvimento)
+// Endpoint para inicializar roles e criar estrutura administrativa (desenvolvimento/setup)
 app.MapPost("/api/admin/ensure", async (IServiceProvider services) =>
 {
     using var scope = services.CreateScope();
