@@ -1,13 +1,16 @@
 # ✅ Status do Deploy - Desenvolvimento de Pessoas
 
 **Data:** 24 de Julho de 2026  
-**Status:** ✅ **PRONTO PARA DEPLOY**
+**Status:** ✅ **PRONTO PARA DEPLOY**  
+**Última Atualização:** Dockerfile corrigido com caminhos completos
 
 ---
 
 ## 🎯 Resumo Executivo
 
 O projeto **Plataforma Desenvolvimento de Pessoas** está completamente preparado para deploy gratuito no Render.com. Todas as configurações, scripts, documentações e código estão prontos.
+
+**✅ CORREÇÃO APLICADA:** Dockerfile atualizado com caminhos completos (`src/Api/Desenvolvimento.Api.csproj`) para evitar falhas de build no Render.
 
 ---
 
@@ -25,7 +28,10 @@ O projeto **Plataforma Desenvolvimento de Pessoas** está completamente preparad
 - [x] Compilação Release bem-sucedida
 
 ### 🐳 Containerização
-- [x] `Dockerfile` otimizado
+- [x] `Dockerfile` otimizado ✅ **CORRIGIDO**
+  - ✅ Caminhos completos (`src/Api/...`)
+  - ✅ Todas dependências incluídas (Services, Core, Infrastructure)
+  - ✅ Multi-stage build
 - [x] `docker-compose.yml` pronto
 - [x] `.dockerignore` configurado
 - [x] Porta 8080 configurada (Render requirement)
@@ -48,6 +54,7 @@ O projeto **Plataforma Desenvolvimento de Pessoas** está completamente preparad
 - [x] `RENDER_DEPLOY.md` - Deploy completo
 - [x] `RENDER_LIMITS.md` - Limitações free tier
 - [x] `POSTGRESQL_GUIDE.md` - Guia do banco
+- [x] `DOCKERFILE_FIX.md` - ✅ **NOVO:** Documentação da correção do Dockerfile
 - [x] `ACESSO_RENDER.md` - URLs e endpoints
 - [x] `PROJETO.md` - Visão geral
 
