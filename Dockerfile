@@ -6,7 +6,6 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY ["src/Api/Desenvolvimento.Api.csproj", "src/Api/"]
-COPY ["src/Services/Desenvolvimento.Services.csproj", "src/Services/"]
 COPY ["src/Core/Desenvolvimento.Core.csproj", "src/Core/"]
 COPY ["src/Infrastructure/Desenvolvimento.Infrastructure.csproj", "src/Infrastructure/"]
 RUN dotnet restore "src/Api/Desenvolvimento.Api.csproj"

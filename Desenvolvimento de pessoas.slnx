@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="Impulsionar/Impulsionar.csproj">
+    <Build Solution="Debug|*" Project="false" />
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="src/Api/Desenvolvimento.Api.csproj" />
 </Solution>
