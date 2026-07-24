@@ -4,29 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar DbContext (suporta SQL Server e PostgreSQL)
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
-    ?? "Server=(localdb)\\mssqllocaldb;Database=DesenvPessoasDb;Trusted_Connection=True;";
-
-// Detectar provider baseado na connection string
-if (connectionString.Contains("Host=") || connectionString.Contains("Server=") && connectionString.Contains("Port=5432"))
-{
-    // PostgreSQL (Render.com, produção)
-    builder.Services.AddDbContext<ApplicationDbContext>(options =>
-        options.UseNpgsql(connectionString));
-}
-else
-{
-    // SQL Server (desenvolvimento local)
-    builder.Services.AddDbContext<ApplicationDbContext>(options =>
-        options.UseSqlServer(connectionString));
-}
+// Configurar DbContext (string de conexão temporária - substituir em appsettings)
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Server=(localdb)\\mssqllocaldb;Database=DesenvPessoasDb;Trusted_Connection=True;"));
 
 // Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
-
 
 // Registrar serviços
 builder.Services.AddScoped<Desenvolvimento.Services.Assessments.IDiscService, Desenvolvimento.Services.Assessments.DiscService>();
@@ -38,31 +23,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Aplicar migrations automaticamente no startup (necessário no Render.com)
-using (var scope = app.Services.CreateScope())
+if (app.Environment.IsDevelopment())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    try
-    {
-        // Aplicar migrations pendentes
-        await dbContext.Database.MigrateAsync();
-        Console.WriteLine("✅ Database migrations applied successfully");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"⚠️ Database migration error: {ex.Message}");
-        // Em desenvolvimento, criar o banco se não existir
-        if (app.Environment.IsDevelopment())
-        {
-            await dbContext.Database.EnsureCreatedAsync();
-            Console.WriteLine("✅ Database created (development mode)");
-        }
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
-
-// Habilitar Swagger em todos os ambientes (ajustar para Production apenas se necessário)
-app.UseSwagger();
-app.UseSwaggerUI();
 
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
@@ -97,6 +62,9 @@ app.MapPost("/api/admin/ensure", async (IServiceProvider services) =>
 
     return Results.Ok(new { rolesInitialized = true });
 });
+
+// Registrar serviço DISC
+builder.Services.AddScoped<Desenvolvimento.Services.Assessments.IDiscService, Desenvolvimento.Services.Assessments.DiscService>();
 
 // Endpoint para submissão de questionário DISC
 app.MapPost("/api/disc/submit", async (ApplicationDbContext db, Desenvolvimento.Services.Assessments.IDiscService discService, Desenvolvimento.Core.Models.DiscAnswer answer) =>

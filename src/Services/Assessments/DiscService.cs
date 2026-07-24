@@ -16,7 +16,7 @@ namespace Desenvolvimento.Services.Assessments
             int s = answer.Answers.TryGetValue("S", out var sv) ? sv : 0;
             int c = answer.Answers.TryGetValue("C", out var cv) ? cv : 0;
 
-            var result = $"{{\"D\":{d},\"I\":{i},\"S\":{s},\"C\":{c}}}";
+            var result = $"{\"D\":{d},\"I\":{i},\"S\":{s},\"C\":{c}}";
             return Task.FromResult(result);
         }
     }

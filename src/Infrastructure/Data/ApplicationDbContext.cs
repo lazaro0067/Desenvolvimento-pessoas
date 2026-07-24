@@ -26,5 +26,14 @@ namespace Desenvolvimento.Infrastructure.Data
         public DbSet<Desenvolvimento.Core.Models.Subscription> Subscriptions { get; set; } = null!;
         public DbSet<Desenvolvimento.Core.Models.UserPermission> UserPermissions { get; set; } = null!;
         public DbSet<Desenvolvimento.Core.Models.SocialShare> SocialShares { get; set; } = null!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configurar DiscAnswer para ignorar a propriedade Answers (não mapeada)
+            modelBuilder.Entity<DiscAnswer>()
+                .Ignore(d => d.Answers);
+        }
     }
 }
