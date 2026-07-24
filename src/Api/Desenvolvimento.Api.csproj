@@ -5,6 +5,7 @@
 	<ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+	<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
 	<ProjectReference Include="..\Core\Desenvolvimento.Core.csproj" />
 	<ProjectReference Include="..\Infrastructure\Desenvolvimento.Infrastructure.csproj" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0" />
